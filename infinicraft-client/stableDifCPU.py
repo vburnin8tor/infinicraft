@@ -14,7 +14,7 @@ print("Loading SD...")
 pipeline = StableDiffusionPipeline.from_pretrained(
     "runwayml/stable-diffusion-v1-5", use_safetensors=True
 )
-pipeline.load_lora_weights("./models/", weight_name="Plixel-SD-1.5.safetensors")
+pipeline.load_lora_weights("./models/", weight_name="lora.safetensors")
 pipeline.safety_checker = lambda images, **kwargs: (images, [False] * len(images))
 print("Models loaded.")
 
