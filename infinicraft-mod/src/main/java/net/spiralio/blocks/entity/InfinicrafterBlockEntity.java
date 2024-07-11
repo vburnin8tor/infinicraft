@@ -384,7 +384,7 @@ public class InfinicrafterBlockEntity
             "Bearer " + Infinicraft.CONFIG.CHAT_API_KEY()
           )
           .setHeader("Content-Type", "application/json; charset=UTF-8")
-          .timeout(Duration.ofSeconds(10))
+          .timeout(Duration.ofSeconds(45))
           .build();
         Infinicraft.LOGGER.debug("Using OpenAI parser.");
         var response = httpClient.send(
